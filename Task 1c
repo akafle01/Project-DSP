@@ -1,0 +1,32 @@
+%Computing the corresponding discrete-time signal, rcv[n] using a sampling frequency f = 4MHx, such that rcv[n] = r(nT)
+% Parameters
+f_s = 4e6; % Sampling frequency (4 MHz)
+
+% Discretize time using the given sampling frequency
+t_discrete = 0:1/f_s:5e-3; % Discrete time vector
+
+% Sample the received continuous-time signal at discrete time points
+rcv_discrete = interp1(t, r_t, t_discrete, 'linear', 'extrap');
+
+% Plot the discrete-time received signal
+figure;
+subplot(2,1,1);
+stem(t_discrete, rcv_discrete, 'Marker', 'o');
+title('Discrete-Time Received Ultrasound Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+% Normalize the amplitude to [-1, 1]
+rcv_discrete_normalized = rcv_discrete / max(abs(rcv_discrete));
+
+% Plot the normalized discrete-time received signal
+subplot(2,1,2);
+stem(t_discrete, rcv_discrete_normalized, 'Marker', 'o');
+title('Normalized Discrete-Time Received Ultrasound Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+% Display the plots
+sgtitle('Discrete-Time Received Ultrasound Signal and Normalized Signal');
