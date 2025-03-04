@@ -1,3 +1,5 @@
+# Ultrasound Signal Simulation and Time-of-Flight Analysis  
+**A MATLAB-Based Approach for Accurate Distance Measurement Using Ultrasound Signals**
 ## **Project Overview**
 This project focuses on simulating and analyzing ultrasound signals for accurate distance measurement using MATLAB. The goal is to generate transmitted and received ultrasound signals, extract signal envelopes, and measure the Time of Flight (ToF) to determine the distance of a target. The project is divided into three main tasks:
 
