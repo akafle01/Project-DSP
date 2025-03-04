@@ -1,4 +1,41 @@
+## **Project Overview**
+This project focuses on simulating and analyzing ultrasound signals for accurate distance measurement using MATLAB. The goal is to generate transmitted and received ultrasound signals, extract signal envelopes, and measure the Time of Flight (ToF) to determine the distance of a target. The project is divided into three main tasks:
 
+1. **Task 1: Simulation Data Generation and Verification**
+   - Simulate a transmitted ultrasound signal using a mathematical model.
+   - Generate a received signal by combining the transmitted signal with its delayed and scaled version (echo).
+   - Convert the signals to discrete-time and extract the envelope to mitigate errors due to attenuation.
+   - Measure ToF using two methods: peak detection and autocorrelation, and compare the results with the ground truth.
+
+2. **Task 2: Recover Envelope from Noisy Received Data and Measure ToF**
+   - Introduce noise to the received signal to simulate a more realistic scenario.
+   - Recover the envelope using the Hilbert Transform and measure ToF using the same two methods.
+   - Evaluate the performance of the methods under varying noise levels and analyze the percentage absolute distance error.
+
+3. **Task 3: Systematic Component of Uncertainty in ToF Estimation**
+   - Investigate the effect of finite time resolution on ToF measurements due to non-integer multiples of the sampling period.
+   - Compute theoretical resolution errors and measure maximum distance errors for varying parameters.
+   - Extend the analysis to variable target distances and compare the performance of the two methods.
+
+## **Key Features**
+- Simulation of transmitted and received ultrasound signals.
+- Extraction of signal envelopes to reduce errors.
+- Measurement of Time of Flight (ToF) using peak detection and autocorrelation.
+- Analysis of noise impact and systematic uncertainties in ToF estimation.
+- Comprehensive MATLAB implementation with detailed error analysis.
+
+## **Results**
+- Successful simulation of ultrasound signals and accurate ToF measurement.
+- Robustness evaluation of ToF methods under noisy conditions.
+- Insights into systematic uncertainties and their impact on distance measurement accuracy.
+
+## **Technologies Used**
+- **MATLAB**: For signal simulation, processing, and analysis.
+- **Digital Signal Processing (DSP)**: For envelope extraction and ToF measurement.
+- **Mathematical Modeling**: For simulating transmitted and received signals.
+
+## **License**
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
 
 ![Kafle_Project_DSP_page-0002](https://github.com/user-attachments/assets/6746c1e6-6a1d-4ab7-b2e9-cbac5a987824)
